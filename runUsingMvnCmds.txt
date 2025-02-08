@@ -1,0 +1,2 @@
+mvn test -Dcucumber.filter.tags="@LoginTest"
+mvn test -Dcucumber.features="src/test/resources/features/login.feature"
