@@ -18,7 +18,7 @@ public class LoginStepDef {
 
     @Given("User is on the login page")
     public void userIsOnLoginPage() {
-        BasePO.initializeDriver();
+//        BasePO.initializeDriver();
         driver = BasePO.getDriver();
         driver.get(ConfigReader.getProperty("url"));
         loginPage = new LoginPage(driver);
