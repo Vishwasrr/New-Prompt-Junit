@@ -13,17 +13,14 @@ public class BasePO {
     protected static WebDriver driver;
 
     public static void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Everything\\Python\\python_stuff\\chromedriver.exe");
+        System.out.println("Starting webdriver");
+        System.setProperty("webdriver.chrome.driver", ConfigReader.getProperty("chromeDriverPath"));
         WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
         String url;
         if (driver == null) {
-//            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-//            System.setProperty("webdriver.chrome.driver", "C:\\Everything\\Python\\python_stuff\\chromedriver.exe");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            url = ConfigReader.getProperty("url");
-            driver.get(url);
+            driver.get(ConfigReader.getProperty("url"));
         }
     }
 

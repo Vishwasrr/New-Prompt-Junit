@@ -1,6 +1,5 @@
 @LoginTest
 Feature: User Login
-
   Scenario: Valid login with correct credentials
     Given User is on the login page
     When User enters valid credentials
